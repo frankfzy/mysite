@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'addProject', views.addProject),
     url(r'TwoProject', views.TwoProject),
     url(r'getProject', views.getProject),
+    url(r'getProject2', views.getProject2),
 ]

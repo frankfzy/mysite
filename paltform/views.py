@@ -47,6 +47,20 @@ def getProject(request):
     }
     return JsonResponse(back)
 
+def getProject2(request):
+    id = request.GET.get('id')
+    print(id)
+    data = Project.objects.all().values()  # 查询库中所有有数据
+    print(data)
+    # data = list(data)
+    back = {
+        'code': 200,
+        'message': '查询成功',
+        'data': data
+    }
+    return JsonResponse(back)
+
+
 
 
 

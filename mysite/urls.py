@@ -21,6 +21,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'addProject', views.addProject),
     url(r'TwoProject', views.TwoProject),
-    url(r'getProject', views.getProject),
+    # url(r'getProject', views.getProject),
     url(r'getProject2', views.getProject2),
+    url(r'updataproject', views.updataproject),
+    url(r'deleteProject', views.deleteProject)
+
 ]
+
+
+
+

@@ -14,18 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls import url
-from paltform import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'addProject', views.addProject),
-    url(r'TwoProject', views.TwoProject),
-    # url(r'getProject', views.getProject),
-    url(r'getProject2', views.getProject2),
-    url(r'updataproject', views.updataproject),
-    url(r'deleteProject', views.deleteProject)
-
+    url('', include('paltform.urls')),
 ]
 
 

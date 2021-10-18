@@ -88,6 +88,9 @@ def deleteProject(request):
     print(name)
     Project.objects.filter(name=name).delete()
 
+    # id1 = data['id']
+    # print(id1)
+    # Project.objects.get(id=id1).delete()
 
     back = {
         'code': 200,
@@ -96,7 +99,19 @@ def deleteProject(request):
     return JsonResponse(back)
 
 
-
+def addmodule(request):
+    data = json.loads(request.body.decode())
+    print(data)
+    name1=data["name"]
+    description1=data["description"]
+    add = childMoudle(name=name1, description=description1)
+    add.save()
+    back = {
+        'code': 200,
+        'message': '添加成功'
+    }
+    # back=json.dumps(back)
+    return JsonResponse(back)
 
 
 
